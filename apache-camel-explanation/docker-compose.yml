@@ -1,0 +1,26 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: apache-camel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: camel_crud
+      POSTGRES_USER: camel_user
+      POSTGRES_PASSWORD: camel_pass
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U camel_user -d camel_crud"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  postgres_data:
+
+
+

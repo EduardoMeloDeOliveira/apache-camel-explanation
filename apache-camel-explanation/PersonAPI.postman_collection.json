@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "Apache Camel Person API",
+    "_postman_id": "c1e1b2a3-4d5e-6789-0123-abcdef123456",
+    "description": "Coleção para testar o endpoint de criação de Person via Apache Camel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"João da Silva\",\n  \"age\": 30\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/person",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "person"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

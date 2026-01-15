@@ -48,6 +48,11 @@
 			<version>4.17.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.apache.camel.springboot</groupId>
+			<artifactId>camel-spring-boot-starter</artifactId>
+			<version>4.17.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
